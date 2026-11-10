@@ -1,0 +1,19 @@
+services:
+  mess-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: iiit-mess-system
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - DATA_DIR=/app/data
+    volumes:
+      - mess-data:/app/data
+
+volumes:
+  mess-data:
+    driver: local

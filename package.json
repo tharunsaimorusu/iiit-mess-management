@@ -1,0 +1,29 @@
+{
+  "name": "iiit-bbsr-mess-management-system",
+  "version": "2.0.0",
+  "description": "Dynamic Full-Stack Web Application for IIIT Bhubaneswar Mess Management & Automated Billing System",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "install:server": "npm --prefix server install",
+    "install:client": "npm --prefix client install",
+    "install:all": "npm run install:server && npm run install:client",
+    "dev:server": "node server/index.js",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "iiit-bhubaneswar",
+    "mess-management",
+    "billing-system",
+    "react",
+    "nodejs",
+    "express",
+    "tailwind"
+  ],
+  "author": "IIIT Bhubaneswar Mess Council & Dev Team",
+  "license": "ISC"
+}
